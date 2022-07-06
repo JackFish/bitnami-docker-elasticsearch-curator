@@ -1,10 +1,10 @@
+# DEPRECATION NOTICE
+
+Since the upstream project is not maintained, this image has been deprecated, and will no longer be maintained nor updated.
+
 # Elasticsearch Curator packaged by Bitnami
 
 ## What is Elasticsearch Curator?
-
-## Container Deprecation Notice
-
-Elasticsearch Curator container is no longer maintained by upstream and is now internally tagged as to be deprecated. This image will no longer be released in our catalog a month after this notice is published, but already released container images will still persist in the registries. Valid to be removed starting on: 07-01-2022
 
 > Elasticsearch Curator is a tool that helps curate and manage indices and snapshots in Elasticsearch clusters.
 
@@ -15,14 +15,14 @@ Trademarks: This software listing is packaged by Bitnami. The respective tradema
 ## TL;DR
 
 ```console
-$ docker run --name elasticsearch-curator bitnami/elasticsearch-curator:latest
+docker run --name elasticsearch-curator bitnami/elasticsearch-curator:latest
 ```
 
 ### Docker Compose
 
 ```console
-$ curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-elasticsearch-curator/master/docker-compose.yml > docker-compose.yml
-$ docker-compose up -d
+curl -sSL https://raw.githubusercontent.com/bitnami/bitnami-docker-elasticsearch-curator/master/docker-compose.yml > docker-compose.yml
+docker-compose up -d
 ```
 
 ## Why use Bitnami Images?
@@ -42,7 +42,6 @@ Non-root container images add an extra layer of security and are generally recom
 
 Learn more about the Bitnami tagging policy and the difference between rolling tags and immutable tags [in our documentation page](https://docs.bitnami.com/tutorials/understand-rolling-tags-containers/).
 
-
 * [`5`, `5-debian-11`, `5.8.4`, `5.8.4-debian-11-r11`, `latest` (5/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-elasticsearch-curator/blob/5.8.4-debian-11-r11/5/debian-11/Dockerfile)
 
 Subscribe to project updates by watching the [bitnami/elasticsearch-curator GitHub repo](https://github.com/bitnami/bitnami-docker-elasticsearch-curator).
@@ -52,19 +51,19 @@ Subscribe to project updates by watching the [bitnami/elasticsearch-curator GitH
 The recommended way to get the Bitnami Elasticsearch Curator Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/bitnami/elasticsearch-curator).
 
 ```console
-$ docker pull bitnami/elasticsearch-curator:latest
+docker pull bitnami/elasticsearch-curator:latest
 ```
 
 To use a specific version, you can pull a versioned tag. You can view the [list of available versions](https://hub.docker.com/r/bitnami/elasticsearch-curator/tags/) in the Docker Hub Registry.
 
 ```console
-$ docker pull bitnami/elasticsearch-curator:[TAG]
+docker pull bitnami/elasticsearch-curator:[TAG]
 ```
 
 If you wish, you can also build the image yourself.
 
 ```console
-$ docker build -t bitnami/elasticsearch-curator:latest 'https://github.com/bitnami/bitnami-docker-elasticsearch-curator.git#master:5/debian-11'
+docker build -t bitnami/elasticsearch-curator:latest 'https://github.com/bitnami/bitnami-docker-elasticsearch-curator.git#master:5/debian-11'
 ```
 
 ## Connecting to other containers
@@ -78,7 +77,7 @@ Containers attached to the same network can communicate with each other using th
 #### Step 1: Create a network
 
 ```console
-$ docker network create elasticsearch-curator-network --driver bridge
+docker network create elasticsearch-curator-network --driver bridge
 ```
 
 #### Step 2: Launch the Elasticsearch Curator container within your network
@@ -86,7 +85,7 @@ $ docker network create elasticsearch-curator-network --driver bridge
 Use the `--network <NETWORK>` argument to the `docker run` command to attach the container to the `elasticsearch-curator-network` network.
 
 ```console
-$ docker run --name elasticsearch-curator-node1 --network elasticsearch-curator-network bitnami/elasticsearch-curator:latest
+docker run --name elasticsearch-curator-node1 --network elasticsearch-curator-network bitnami/elasticsearch-curator:latest
 ```
 
 #### Step 3: Run another containers
@@ -102,7 +101,7 @@ Find all of the Elasticsearch Curator configuration options in the official [Cur
 The Bitnami Elasticsearch Curator Docker image sends the container logs to `stdout`. To view the logs:
 
 ```console
-$ docker logs elasticsearch-curator
+docker logs elasticsearch-curator
 ```
 
 You can configure the containers [logging driver](https://docs.docker.com/engine/admin/logging/overview/) using the `--log-driver` option if you wish to consume the container logs differently. In the default configuration docker uses the `json-file` driver.
@@ -116,7 +115,7 @@ Bitnami provides up-to-date versions of Elasticsearch Curator, including securit
 #### Step 1: Get the updated image
 
 ```console
-$ docker pull bitnami/elasticsearch-curator:latest
+docker pull bitnami/elasticsearch-curator:latest
 ```
 
 #### Step 2: Stop the running container
@@ -124,13 +123,13 @@ $ docker pull bitnami/elasticsearch-curator:latest
 Stop the currently running container using the command
 
 ```console
-$ docker stop elasticsearch-curator
+docker stop elasticsearch-curator
 ```
 
 #### Step 3: Remove the currently running container
 
 ```console
-$ docker rm -v elasticsearch-curator
+docker rm -v elasticsearch-curator
 ```
 
 #### Step 4: Run the new image
@@ -138,7 +137,7 @@ $ docker rm -v elasticsearch-curator
 Re-create your container from the new image.
 
 ```console
-$ docker run --name elasticsearch-curator bitnami/elasticsearch-curator:latest
+docker run --name elasticsearch-curator bitnami/elasticsearch-curator:latest
 ```
 
 ## Contributing
@@ -149,11 +148,11 @@ We'd love for you to contribute to this container. You can request new features 
 
 If you encountered a problem running this container, you can file an [issue](https://github.com/bitnami/bitnami-docker-elasticsearch-curator/issues/new). For us to provide better support, be sure to include the following information in your issue:
 
-- Host OS and version
-- Docker version (`docker version`)
-- Output of `docker info`
-- Version of this container
-- The command you used to run the container, and any relevant output you saw (masking any sensitive information)
+* Host OS and version
+* Docker version (`docker version`)
+* Output of `docker info`
+* Version of this container
+* The command you used to run the container, and any relevant output you saw (masking any sensitive information)
 
 ## License
 
