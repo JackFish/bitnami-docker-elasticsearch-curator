@@ -34,5 +34,4 @@ ENV APP_VERSION="5.8.4" \
     PATH="/opt/bitnami/python/bin:/opt/bitnami/elasticsearch-curator/bin:$PATH"
 
 USER 1001
-ENTRYPOINT [ "curator" ]
-CMD [ "--help" ]
+CMD [ "curator --help" ]
